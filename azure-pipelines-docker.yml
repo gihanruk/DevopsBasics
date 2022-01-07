@@ -24,3 +24,10 @@ steps:
   inputs:
     containerRegistry: 'DockerHub-Gihan'
     command: 'login'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'DockerHub-Gihan'
+    repository: 'azuredevopsbasics'
+    command: 'buildAndPush'
+    Dockerfile: '**/AzureDockerfile'
